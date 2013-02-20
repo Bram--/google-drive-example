@@ -1,4 +1,11 @@
 GoogleDrive::Application.routes.draw do
+
+  match 'auth' =>'auth#auth'
+  resource :drive, only: :index
+  resources :files
+
+  root to: 'drive#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

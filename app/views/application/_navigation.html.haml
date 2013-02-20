@@ -1,0 +1,13 @@
+.container
+  .navbar
+    .navbar-inner
+      %a.brand Drive
+      %ul.nav
+        %li{class: (request.url == root_url) ? 'active' : ''}
+          = link_to 'Drive metadata', root_url
+
+        %li{class: (request.url == new_file_url) ? 'active' : ''}
+          = link_to 'File upload', new_file_url
+
+        %li{class: (request.url == files_url) ? 'active' : ''}
+          = link_to 'File listing', files_url

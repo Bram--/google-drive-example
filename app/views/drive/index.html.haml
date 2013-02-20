@@ -1,0 +1,8 @@
+%table.table.table-bordered
+  %tr
+    %th Key
+    %th Data
+  - @metadata.to_hash.each do |key, data|
+    %tr
+      %td= key
+      %td= data
