@@ -9,8 +9,13 @@ gem 'sqlite3'
 gem 'google-api-client', :require => 'google/api_client'
 gem 'settingslogic'
 gem 'haml'
-gem 'pry'
 gem 'twitter-bootstrap-rails'
+
+group :development do
+  gem 'pry'
+  gem 'quiet_assets'
+  gem 'thin'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

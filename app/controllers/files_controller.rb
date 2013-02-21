@@ -6,6 +6,15 @@ class FilesController < ApplicationController
   def new; end
 
   def create
-    binding.pry
+    file, descr = params.slice(:file, :description).values
+    drive_client.upload_file!(file, descr)
+
+    redirect_to files_url
+  end
+
+  def destroy
+    drive_client.delete_file!(params[:id])
+
+    redirect_to files_url
   end
 end

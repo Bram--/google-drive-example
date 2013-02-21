@@ -1,3 +1,8 @@
-= form_tag files_url, method: 'post', multi_part: true do
-  = file_field_tag 'files[file]'
-  = submit_tag
+.container
+  = form_tag files_url, method: 'post', multipart: true, class: 'form-horizontal' do
+    %fieldset
+      %label Upload!
+      = file_field_tag 'file'
+      %label Description
+      = text_field_tag 'description'
+      = submit_tag
